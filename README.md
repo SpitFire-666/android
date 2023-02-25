@@ -84,3 +84,11 @@ adb shell pm disable-user --user 0 <package_to_disable>
 .\adb shell pm disable-user --user 0 com.google.android.apps.tachyon #Google Duo
 ```
 
+## Copy files to Android in recovery mode
+```
+adb push "C:\NEXUS\Lineage\lineage-14.1-20171106-nightly-bullhead-signed.zip" /sdcard/ 
+```
+
+![image](https://user-images.githubusercontent.com/38451588/221347116-cceaec8a-6a42-47b6-877d-ab7285b705f7.png)
+
+ 
