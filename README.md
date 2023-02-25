@@ -1,36 +1,38 @@
 # Android
 
-## App Recommendations
+## Recommended Apps
 
 
 | Function | App | Comments | Free/Open Source? | 
 |-|-|-|-|
 | Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | |
-| Audio Book Player:  |
+| Audio Book Player | Simple ABP Free | 
 | Podcast App | AntennaPod |
-| QR reader | BinaryEye
+| QR reader | BinaryEye |
 | Image Searcher | [ImageSearchMan](https://play.google.com/store/apps/details?id=sansunsen3.imagesearcher) |
 | Gallery app | Simple Gallery | 
 | File Explorer | Solid Explorer | 
-| Barcode/Wallet app | Anycode Wallet
+| Barcode/Wallet app | Anycode Wallet |
 | Weather | Weatherzone
 | To do/tasks | Microsoft ToDo
-| Network Scanner | Fing (old version/apk)
-| Calculator | 
-| Instagram alternative | Barinsta
-| Screen on | Coffee
-| Contacts| | 
+| Network Scanner | Fing (old version/apk) |
+| YouTube client | NewPipe | 
+| Calculator | |
+| Instagram client | Barinsta
+| Screen on toggle | Coffee
+| Contacts | | 
 | App Store | F-Droid |
 | Music Player | Phonograph |
-| PDF reader | 
+| PDF reader | |
 | Spotify | Spotify Lite |
 | Facebook Lite |
 | VNC Viewer |
 | Compass | 
-| Unit Converter | 
-| Remote Desktop (RDP) | 
-| Email |
-| Calendar | 
+| Unit Converter | |
+| Remote Desktop (RDP) |  |
+| Email | |
+| Calendar | |
+| Cast photos/videos/audio to DLNA (TV) | XCast |
 
 
 ## SMB Server
