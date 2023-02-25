@@ -53,12 +53,32 @@ adb devices
 
 ### Disable installed apps (no root required) 
 
-- List enabled apps 
+- Use [Application Inspector](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01) to help identify package names
+
+- List enabled apps
 ```
-adb shell pm list packages -e  
+adb shell pm list packages -e
 ```
 - Disable the app: 
 ```
-adb shell pm disable-user --user 0 <package_to_disable> 
+adb shell pm disable-user --user 0 <package_to_disable>
 ```
- 
+``` 
+.\adb shell pm disable-user --user 0 com.google.android.feedback
+.\adb shell pm disable-user --user 0 com.google.android.printservice.recommendation
+.\adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox # Google 
+.\adb shell pm disable-user --user 0 com.google.android.music # Google Play Music
+.\adb shell pm disable-user --user 0 com.google.android.apps.docs # Google Drive
+.\adb shell pm disable-user --user 0 com.google.android.videos
+.\adb shell pm disable-user --user 0 com.android.printspooler
+.\adb shell pm disable-user --user 0 com.google.android.marvin.talkback # Android Accessibility Suite
+.\adb shell pm disable-user --user 0 com.microsoft.skydrive # Microsoft Skydrive
+.\adb shell pm disable-user --user 0 com.microsoft.office.officehubrow # Microsoft Office
+.\adb shell pm disable-user --user 0 com.android.chrome # Chrome
+.\adb shell pm disable-user --user 0 com.google.android.youtube
+.\adb shell pm disable-user --user 0 com.google.android.tts # Google Text-to-speech Engine
+.\adb shell pm disable-user --user 0 com.google.android.apps.turbo # Device Health Services
+.\adb shell pm disable-user --user 0 com.google.android.gm #gmail
+.\adb shell pm disable-user --user 0 com.google.android.apps.tachyon #Google Duo
+```
+
