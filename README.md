@@ -92,3 +92,13 @@ adb push "C:\NEXUS\Lineage\lineage-14.1-20171106-nightly-bullhead-signed.zip" /s
 ![image](https://user-images.githubusercontent.com/38451588/221347116-cceaec8a-6a42-47b6-877d-ab7285b705f7.png)
 
  
+## Flash recovery (eg TWRP) 
+
+- Boot into bootloader (fastboot) 
+- Connect via USB 
+- Open CMD/PowerShell 
+
+```
+fastboot flash recovery twrp.img 
+fastboot reboot
+```
