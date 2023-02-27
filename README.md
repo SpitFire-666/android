@@ -102,3 +102,80 @@ adb push "C:\NEXUS\Lineage\lineage-14.1-20171106-nightly-bullhead-signed.zip" /s
 fastboot flash recovery twrp.img 
 fastboot reboot
 ```
+
+
+ADB over WIFI 
+
+Install app (easier than DIY) - ROOT access required! 
+
+https://play.google.com/store/apps/details?id=com.ttxapps.wifiadb&hl=en 
+
+ 
+
+Download ADB/Fastboot 
+
+https://dl.google.com/android/repository/platform-tools-latest-windows.zip 
+
+ 
+
+Connect to the IP:Port on PC 
+
+.\adb.exe connect 192.168.1.31:5555 
+
+ ![image](https://user-images.githubusercontent.com/38451588/221443969-00b604c2-2d90-473f-8165-e954f6380aaf.png)
+
+
+Check the screen and allow any authentication requests 
+
+
+ADB over USB 
+
+ADB commands 
+
+adb install "ES file explorer com.estrongs.android.old.apk" 
+
+adb reboot recovery 
+
+adb backup -all -f /backup/location/file.ab 
+
+.\adb.exe shell pm list packages | select-string "fing" 
+
+Backup an app and app data (ROOT required) 
+
+ 
+
+# search for the app (eg fing) 
+
+$test = .\adb.exe shell pm list packages | select-string "fing" 
+
+# Grab the package name 
+
+$test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
+
+ 
+
+.\adb backup -f c:\temp\$test -apk $test 
+
+.\adb.exe backup -f c:\temp\$test -apk $test 
+
+$test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
+
+ 
+
+ ## Re-enable app
+ ```
+ pm enable -–user 0 PackageName
+ adb shell cmd package install-existing <package name>
+
+```
+
+
+ 
+
+$apkpath = .\adb.exe shell pm path $test 
+
+$apkpath=($apkpath.ToString()).trimstart("package");$apkpath = $apkpath.TrimStart(":") 
+
+ 
+
+ 
