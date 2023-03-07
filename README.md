@@ -163,19 +163,34 @@ $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":")
  
 
  ## Re-enable app
- ```
- pm enable -–user 0 PackageName
- adb shell cmd package install-existing <package name>
-
 ```
-
-
- 
+pm enable -–user 0 PackageName
+adb shell cmd package install-existing <package name>
+```
 
 $apkpath = .\adb.exe shell pm path $test 
 
 $apkpath=($apkpath.ToString()).trimstart("package");$apkpath = $apkpath.TrimStart(":") 
 
  
+### Install (Sideload) an .apk
+
+Ensure USB debugging and Unknown Sources are enabled on the android phone
+
+adb install "ES file explorer com.estrongs.android.old.apk" 
+
+![image](https://user-images.githubusercontent.com/38451588/223316757-7dcd22f7-1bbd-4867-906e-a5ab94745129.png)
+
+
+### PowerShell bulk apk installation 
+```powershell
+$apks = ls *.apk -path c:\nexus\apps | select -ExpandProperty FullName 
+Foreach($apk in $apks){.\adb.exe install $apk 
+Write-host "installing $apk" -foregroundcolor yellow 
+}
+```
+
+![image](https://user-images.githubusercontent.com/38451588/223316836-e96147a9-677b-414d-bca8-980235f28729.png)
+
 
  
