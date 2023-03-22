@@ -53,6 +53,12 @@ adb devices
 ![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
 
 
+### Uninstall apps
+
+$packages = (.\adb.exe shell pm list packages -e) -replace("package:","") | ogv -PassThru
+.\adb.exe uninstall --user 0 $packages
+
+
 ### Disable installed apps (no root required) 
 
 - Use [Application Inspector](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01) to help identify package names
