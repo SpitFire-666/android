@@ -3,36 +3,37 @@
 ## Recommended Apps
 
 
-| Function | App | Comments | Free/Open Source? | 
+| Function | App | Backup/Restore from App? | Free/Open Source? | 
 |-|-|-|-|
-| Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | |
-| Audio Book Player | Simple ABP Free | 
-| Podcast App | AntennaPod |
-| QR reader | BinaryEye |
-| Image Searcher | [ImageSearchMan](https://play.google.com/store/apps/details?id=sansunsen3.imagesearcher) |
+| Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
+| Audio Book Player | Moises | No backup options exist | 
+| Podcast App | AntennaPod | ✅  |
+| QR reader | BinaryEye | N | 
+| Image Searcher | ? |
 | Gallery app | Simple Gallery | 
 | File Explorer | Solid Explorer | 
-| Barcode/Wallet app | Anycode Wallet |
+| Barcode/Wallet app | Catima | ✅ |
 | Weather | Weatherzone
-| To do/tasks | Microsoft ToDo
+| To do/tasks | Microsoft ToDo |
 | Network Scanner | Fing (old version/apk) |
-| YouTube client | NewPipe | 
+| YouTube client | NewPipe | ✅ |
 | Calculator | |
-| Instagram client | Barinsta
-| Screen on toggle | Coffee
+| Instagram client | Barinsta 
+| Screen on toggle | Coffee 
 | Contacts | | 
-| App Store | F-Droid |
-| Music Player | Phonograph |
-| PDF reader | |
+| App Store | F-Droid/Aurora |
+| Music Player | Phonograph Plus |
+| PDF reader | FastPDFReader |
 | Spotify | Spotify Lite |
 | Facebook Lite |
 | VNC Viewer |
 | Compass | 
 | Unit Converter | |
-| Remote Desktop (RDP) |  |
 | Email | |
 | Calendar | |
 | Cast photos/videos/audio to DLNA (TV) | XCast |
+| | TUFFS | 
+| Metronome | Tempo | | 
 
 
 ## SMB Server
@@ -188,7 +189,7 @@ adb install "ES file explorer com.estrongs.android.old.apk"
 ![image](https://user-images.githubusercontent.com/38451588/223316757-7dcd22f7-1bbd-4867-906e-a5ab94745129.png)
 
 
-### PowerShell bulk apk installation 
+### PowerShell bulk .APK installation 
 ```powershell
 $apks = ls *.apk -path c:\nexus\apps | select -ExpandProperty FullName 
 Foreach($apk in $apks){.\adb.exe install $apk 
@@ -199,4 +200,13 @@ Write-host "installing $apk" -foregroundcolor yellow
 ![image](https://user-images.githubusercontent.com/38451588/223316836-e96147a9-677b-414d-bca8-980235f28729.png)
 
 
- 
+ ### Backup .APK files/installers from device (Solid Explorer)
+
+1. Menu
+2. Applications
+3. User Apps
+4. Select All
+5. Copy
+6. Paste somewhere
+
+
