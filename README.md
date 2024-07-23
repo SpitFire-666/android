@@ -191,9 +191,10 @@ adb install "ES file explorer com.estrongs.android.old.apk"
 
 ### PowerShell bulk .APK installation 
 ```powershell
-$apks = ls *.apk -path c:\nexus\apps | select -ExpandProperty FullName 
-Foreach($apk in $apks){.\adb.exe install $apk 
-Write-host "installing $apk" -foregroundcolor yellow 
+$apks = (ls *.apk -path 'C:\APKs\').fullname | ogv -PassThru
+Foreach($apk in $apks){
+Write-host "installing $apk" -foregroundcolor yellow
+.\adb.exe install $apk  
 }
 ```
 
