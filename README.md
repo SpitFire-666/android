@@ -126,7 +126,7 @@ https://play.google.com/store/apps/details?id=com.ttxapps.wifiadb&hl=en
 
  
 
-Download ADB/Fastboot 
+### Download ADB/Fastboot 
 
 https://dl.google.com/android/repository/platform-tools-latest-windows.zip 
 
@@ -134,8 +134,9 @@ https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 
 Connect to the IP:Port on PC 
 
+```powershell
 .\adb.exe connect 192.168.1.31:5555 
-
+```
  ![image](https://user-images.githubusercontent.com/38451588/221443969-00b604c2-2d90-473f-8165-e954f6380aaf.png)
 
 
@@ -145,18 +146,20 @@ Check the screen and allow any authentication requests
 ADB over USB 
 
 ADB commands 
-
+```
 adb install "ES file explorer com.estrongs.android.old.apk" 
-
+```
+```
 adb reboot recovery 
-
+```
+```
 adb backup -all -f /backup/location/file.ab 
-
+```
+```powershell
 .\adb.exe shell pm list packages | select-string "fing" 
-
+```
 Backup an app and app data (ROOT required) 
 
- 
 
 # search for the app (eg fing) 
 
