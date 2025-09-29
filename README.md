@@ -5,14 +5,14 @@
 
 | Function | App | Backup/Restore from App? | Free/Open Source? | 
 |-|-|-|-|
-| Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
+| 🌎 Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
 | Audio Book Player | Voice | No backup options exist | 
-| Phone | Fossify Phone | 
+| 📞 Phone | Fossify Phone | 
 | SMS/Messages | [Fossify Messages](https://github.com/FossifyOrg/Messages/releases/download/1.3.0/messages-15-foss-release.apk)
 | Podcast App | AntennaPod | ✅  |
 | QR reader | BinaryEye | N | 
 | Image Searcher | ? |
-| Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | 
+| 🖼 Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | 
 | File Explorer | Solid Explorer | 
 | Barcode/Wallet app | Catima | ✅ |
 | Weather | Weatherzone |
@@ -22,19 +22,14 @@
 | Calculator | |
 | Screen on toggle | Coffee 
 | Contacts | Fossify Contacts | 
-| App Store | F-Droid/Aurora |
+| App Store | F-Droid/Aurora store |
 | Music Player | Phonograph Plus |
 | PDF reader | FastPDFReader |
-| Spotify | Spotify Lite |
-| Facebook Lite |
-| VNC Viewer |
 | Compass | 
 | Unit Converter | |
-| Email | |
 | Calendar | |
 | Cast photos/videos/audio to DLNA (TV) | XCast |
-| | TUFFS | 
-| Metronome | Tempo | | 
+| | TUFFS |
 
 
 ## SMB Server
