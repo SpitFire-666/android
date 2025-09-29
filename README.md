@@ -139,9 +139,7 @@ Connect to the IP:Port on PC
 ```
  ![image](https://user-images.githubusercontent.com/38451588/221443969-00b604c2-2d90-473f-8165-e954f6380aaf.png)
 
-
 Check the screen and allow any authentication requests 
-
 
 ADB over USB 
 
@@ -155,11 +153,12 @@ adb reboot recovery
 ```
 adb backup -all -f /backup/location/file.ab 
 ```
+
 ```powershell
 .\adb.exe shell pm list packages | select-string "fing" 
 ```
-Backup an app and app data (ROOT required) 
 
+Backup an app and app data (ROOT required) 
 
 # search for the app (eg fing) 
 
@@ -169,8 +168,6 @@ $test = .\adb.exe shell pm list packages | select-string "fing"
 
 $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
 
- 
-
 .\adb backup -f c:\temp\$test -apk $test 
 
 .\adb.exe backup -f c:\temp\$test -apk $test 
@@ -179,31 +176,32 @@ $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":")
 
  
 
- ## Re-enable app
+ ## Re-enable an app
 ```
 pm enable -–user 0 PackageName
 adb shell cmd package install-existing <package name>
 ```
 
+```
 $apkpath = .\adb.exe shell pm path $test 
-
 $apkpath=($apkpath.ToString()).trimstart("package");$apkpath = $apkpath.TrimStart(":") 
-
+```
  
 ### Install (Sideload) an .apk
 
-Ensure USB debugging and Unknown Sources are enabled on the android phone
+- Ensure USB debugging and Unknown Sources are enabled on the android phone
 
+```
 adb install "ES file explorer com.estrongs.android.old.apk" 
-
+```
 ![image](https://user-images.githubusercontent.com/38451588/223316757-7dcd22f7-1bbd-4867-906e-a5ab94745129.png)
 
 
 ### PowerShell bulk .APK installation 
 ```powershell
-$apks = (ls *.apk -path 'C:\APKs\').fullname | ogv -PassThru
+$apks = (ls *.apk -path 'C:\APKs\').fullname | ogv -PassThru -Title "Choose apps to install"
 Foreach($apk in $apks){
-Write-host "installing $apk" -foregroundcolor yellow
+Write-Progress -Activity "Installing $apk"
 .\adb.exe install $apk  
 }
 ```
