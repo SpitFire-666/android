@@ -6,15 +6,15 @@
 | Function | App | Backup/Restore from App? | Free/Open Source? | 
 |-|-|-|-|
 | 🌎 Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
-| Audio Book Player | Voice | No backup options exist | 
-| 📞 Phone | Fossify Phone | 
+| Audio Book Player | [Voice](https://github.com/PaulWoitaschek/Voice/releases/download/25.9.19-5309019/app-github-release.apk) | No backup options exist | 
+| 📞 Phone | [Fossify Phone](https://github.com/FossifyOrg/Phone/releases/download/1.7.1/phone-14-foss-release.apk) | 
 | SMS/Messages | [Fossify Messages](https://github.com/FossifyOrg/Messages/releases/download/1.3.0/messages-15-foss-release.apk)
-| Podcast App | AntennaPod | ✅  |
-| QR reader | BinaryEye | N | 
+| Podcast App | [AntennaPod](https://f-droid.org/repo/de.danoeh.antennapod_3090095.apk) | ✅  |
+| QR reader | [BinaryEye](https://f-droid.org/repo/de.markusfisch.android.binaryeye_150.apk) | N | 
 | Image Searcher | ? |
 | 🖼 Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | 
 | File Explorer | Solid Explorer | 
-| Barcode/Wallet app | Catima | ✅ |
+| Barcode/Wallet app | [Catima](https://github.com/CatimaLoyalty/Android/releases/download/v2.38.0/app-foss-release.apk) | ✅ |
 | Weather | Weatherzone |
 | To do/tasks | Microsoft ToDo |
 | Network Scanner | Fing (old version/apk) |
