@@ -27,7 +27,7 @@
 | PDF reader | FastPDFReader |
 | Compass | 
 | Unit Converter | |
-| Calendar | |
+| 🗓 Calendar | [Fossify Calendar](https://github.com/FossifyOrg/Calendar/releases/download/1.6.1/calendar-11-foss-release.apk) |
 | Cast photos/videos/audio to DLNA (TV) | XCast |
 | | TUFFS |
 
