@@ -9,10 +9,12 @@
 | Audio Book Player | [Voice](https://github.com/PaulWoitaschek/Voice/releases/download/25.9.19-5309019/app-github-release.apk) | No backup options exist | 
 | 📞 Phone | [Fossify Phone](https://github.com/FossifyOrg/Phone/releases/download/1.7.1/phone-14-foss-release.apk) | 
 | SMS/Messages | [Fossify Messages](https://github.com/FossifyOrg/Messages/releases/download/1.3.0/messages-15-foss-release.apk)
-| Podcast App | [AntennaPod](https://f-droid.org/repo/de.danoeh.antennapod_3090095.apk) | ✅  |
+| Podcast App | [AntennaPod](https://f-droid.org/repo/de.danoeh.antennapod_3090095.apk) | ✅ | ✅ |
 | QR reader | [BinaryEye](https://f-droid.org/repo/de.markusfisch.android.binaryeye_150.apk) | N | 
+| 📷 Camera |  |
+| ⌨ Keyboard | [FUTO Keyboard](https://github.com/futo-org/android-keyboard/releases/download/0.1.25/keyboard-0.1.25.apk) | ✅ | ✅ |
 | Image Searcher | ? |
-| 🖼 Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | 
+| 🖼 Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | | ✅ |
 | File Explorer | Solid Explorer | 
 | Barcode/Wallet app | [Catima](https://github.com/CatimaLoyalty/Android/releases/download/v2.38.0/app-foss-release.apk) | ✅ |
 | Weather | Weatherzone |
@@ -21,7 +23,7 @@
 | 📺 YouTube client | [NewPipe](https://github.com/TeamNewPipe/NewPipe/releases/download/v0.28.0/NewPipe_v0.28.0.apk) | ✅ | ✅ | 
 | Calculator | |
 | Screen on toggle | Coffee |
-| Contacts | Fossify Contacts | 
+| 📖 Contacts | Fossify Contacts | ✅ | ✅ |
 | App Store | F-Droid/Aurora store |
 | 🎶 Music Player | [Phonograph Plus](https://github.com/chr56/Phonograph_Plus/releases/download/v1.11.0/PhonographPlus_1.11.0_ModernStableRelease.apk) |
 | PDF reader | FastPDFReader |
