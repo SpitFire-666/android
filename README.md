@@ -200,7 +200,7 @@ adb install "ES file explorer com.estrongs.android.old.apk"
 $apks = (ls *.apk -path 'C:\APKs\').fullname | ogv -PassThru -Title "Choose apps to install"
 Foreach($apk in $apks){
 Write-Progress -Activity "Installing $apk"
-.\adb.exe install $apk  
+.\adb.exe install --bypass-low-target-sdk-block $apk  
 }
 ```
 
