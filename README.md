@@ -2,7 +2,6 @@
 
 ## Recommended Apps
 
-
 | Function | App | Backup/Restore from App? | Free/Open Source? | 
 |-|-|-|-|
 | 🌎 Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
@@ -217,3 +216,9 @@ Write-Progress -Activity "Installing $apk"
 6. Paste somewhere
 
 
+## Theming
+
+- Icons: Use wrestool to extract icons from Windows .exe and .dll files
+- Convert .ico to .png using imagemagick
+- For Nova launcher, theme icons in the app drawer (NOT the home screen)
+- Tile wallpaper using imagemagick
