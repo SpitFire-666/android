@@ -222,3 +222,7 @@ Write-Progress -Activity "Installing $apk"
 - Convert .ico to .png using imagemagick
 - For Nova launcher, theme icons in the app drawer (NOT the home screen)
 - Tile wallpaper using imagemagick
+
+Nova launcher wallpaper
+- Use Gallery (instead of Nova launcher) to set the wallpaper
+- ..., Set as, Gallery Wallpaper, tap the 4 arrows, resize, apply
