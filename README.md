@@ -45,17 +45,22 @@
 - Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
 
 ```
-adb devices 
+adb devices
 ```
 
 ![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
 
 
 ### Uninstall apps
-
+```powershell
 $packages = (.\adb.exe shell pm list packages -e) -replace("package:","") | ogv -PassThru
 .\adb.exe uninstall --user 0 $packages
+```
 
+### Copy files from PC to Phone
+```powershell
+C:\Android\ADB+Fastboot\adb push "C:\Android\FUTOKeyboardSettings_2026-06-10_14-12-51.backup" /sdcard/Download/
+```
 
 ### Disable installed apps (no root required) 
 
