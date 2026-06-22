@@ -51,7 +51,16 @@ adb devices
 ![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
 
 
-### Uninstall apps
+### Uninstall apps - no root required!
+
+List packages
+
+```powershell
+adb.exe shell pm list packages -e
+```
+
+Interactive uninstaller/en-masse
+
 ```powershell
 $packages = (.\adb.exe shell pm list packages -e) -replace("package:","") | ogv -PassThru
 .\adb.exe uninstall --user 0 $packages
