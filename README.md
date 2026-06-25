@@ -33,14 +33,6 @@
 | | TUFFS |
 
 
-## SMB Server
-
-## Webcam Server
-
-## VNC Server
-
-## ADB Stuff
-
 ### Get Started
 - Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
 
@@ -65,8 +57,9 @@ $bloatware = @(
 "com.google.android.apps.turbo" # Device Health Services
 "com.google.android.gm" #gmail
 "com.google.android.apps.tachyon" #Google Duo
-"com.samsung.android.bixby.wakeup"
-"com.samsung.android.bixby.agent"
+"com.samsung.android.bixby.wakeup" # Bixby
+"com.samsung.android.bixby.agent" # Bixby
+"com.samsung.android.visionintelligence" # Bixby Vision
 "com.facebook.katana" # facebook
 "com.samsung.android.app.tips" # Samsung Tips
 "com.samsung.android.game.gamehome" # Gaming hub
@@ -78,23 +71,46 @@ $bloatware = @(
 "com.google.android.apps.bard" # Google Gemini
 "com.android.hotwordenrollment.okgoogle" # Hey Google hotword
 "com.sec.android.app.vepreload" # Studio/Samsung video editor
-"com.samsung.android.visionintelligence" # Bixby Vision
 "com.samsung.android.samsungpassautofill" # Autofill with samsung pass
 "com.google.audio.hearing.visualization.accessibility.scribe" # Live Transcribe and SOund notifications
 "com.sec.android.app.samsungapps" # Samsung galaxy store
 "com.google.android.youtube" # youtube
 "com.google.android.gm" # gmail
 "com.android.chrome" # Chrome
-# My Vodafone
-# Amazon Shopping
-
+"au.com.vodafone.mobile.gss" # My Vodafone - forced install
+"com.amazon.mShop.android.shopping" # Amazon Shopping
+"com.amazon.appmanager" # Amazon Mobile Device Information Provider
+"com.samsung.android.vtcamerasettings" # Samsung video call effects
+"com.samsung.SMT" # Samsung text-to-speech engine
+"com.samsung.android.ardrawing" # Samsung AR Drawing
+"com.netflix.partner.activation" # Netflix
+"com.sec.android.easyMover.Agent" # Samsung Smart Switch - device migration tool
+"com.sec.android.easyMover" # Samsung Smart Switch
+"com.samsung.android.calendar" # Samsung Calendar
+"com.samsung.android.app.reminder" # Samsung Reminder
+"com.osp.app.signin" # Samsung Account
+"com.samsung.android.scloud" # Samsung CLoud
+"com.samsung.android.mapsagent" # Application recommendations
+"com.samsung.android.app.omcagent" # Recommended apps
+"com.samsung.android.app.camera.sticker.facearavatar.preload" # Crocro and friends
+"com.samsung.android.themestore" # Galaxy themes
+"com.samsung.android.themecenter" # Galaxy themes Service
+"com.samsung.android.messaging" # Samsung Messages
+"com.google.android.apps.messaging" # Google Messaging
+"com.samsung.android.dbsc" # Galaxy setup
+"com.sec.android.app.SecSetupWizard" #Samsung Setup Wizard
+"com.sec.phone" # Samsung phone - warning!
+"com.sec.android.app.setupwizard" #Setup Wizard
+"com.samsung.android.app.routines" # Modes and routines
+# gallery
+# contacts 
+"com.samsung.android.dialer" # Samsung PHone
 )
 $bloatware | % {
-# .\adb shell pm disable-user --user 0 $_ # optional - disable apps
-.\adb.exe uninstall --user 0 $_ # uninstall apps
+# .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
+.\adb.exe uninstall --user 0 $_
 }
 ```
-
 
 List packages
 
@@ -111,7 +127,7 @@ $packages = (.\adb.exe shell pm list packages -e) -replace("package:","") | ogv 
 
 ### Copy files from PC to Phone
 ```powershell
-C:\Android\ADB+Fastboot\adb push "C:\Android\FUTOKeyboardSettings_2026-06-10_14-12-51.backup" /sdcard/Download/
+C:\Android\ADB+Fastboot\adb push "C:\Android\file.zip" /sdcard/Download/
 ```
 
 ### Disable installed apps (no root required) 
@@ -212,10 +228,9 @@ adb backup -all -f /backup/location/file.ab
 .\adb.exe shell pm list packages | select-string "fing" 
 ```
 
-Backup an app and app data (ROOT required) 
-
+### Backup an app and app data (ROOT required) 
+```
 # search for the app (eg fing) 
-
 $test = .\adb.exe shell pm list packages | select-string "fing" 
 
 # Grab the package name 
@@ -228,7 +243,7 @@ $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":")
 
 $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
 
- 
+``` 
 
  ## Re-enable an app
 ```
@@ -283,3 +298,12 @@ Write-Progress -Activity "Installing $apk"
 Nova launcher wallpaper
 - Use Gallery (instead of Nova launcher) to set the wallpaper
 - ..., Set as, Gallery Wallpaper, tap the 4 arrows, resize, apply
+
+
+## SMB Server
+
+## Webcam Server
+
+## VNC Server
+
+## ADB Stuff
