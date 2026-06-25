@@ -50,8 +50,51 @@ adb devices
 
 ![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
 
+## Uninstall apps - no root required!
 
-### Uninstall apps - no root required!
+```powershell
+$bloatware = @(
+"com.google.android.feedback"
+"com.google.android.printservice.recommendation"
+"com.google.android.googlequicksearchbox" # Google 
+"com.google.android.music" # Google Play Music
+"com.google.android.apps.docs" # Google Drive
+"com.google.android.videos"
+"com.microsoft.skydrive" # Microsoft OneDrive/Skydrive
+"com.microsoft.office.officehubrow" # Microsoft Office
+"com.google.android.apps.turbo" # Device Health Services
+"com.google.android.gm" #gmail
+"com.google.android.apps.tachyon" #Google Duo
+"com.samsung.android.bixby.wakeup"
+"com.samsung.android.bixby.agent"
+"com.facebook.katana" # facebook
+"com.samsung.android.app.tips" # Samsung Tips
+"com.samsung.android.game.gamehome" # Gaming hub
+"com.samsung.android.app.camera.sticker.facearavatar.preload"  # Avatar Stickers
+"com.sec.android.mimage.avatarstickers"
+"com.google.android.adservices.api" # Ad privacy
+"com.google.android.healthconnect.controller" # Health Connect
+"com.instagram.android" # Instagram
+"com.google.android.apps.bard" # Google Gemini
+"com.android.hotwordenrollment.okgoogle" # Hey Google hotword
+"com.sec.android.app.vepreload" # Studio/Samsung video editor
+"com.samsung.android.visionintelligence" # Bixby Vision
+"com.samsung.android.samsungpassautofill" # Autofill with samsung pass
+"com.google.audio.hearing.visualization.accessibility.scribe" # Live Transcribe and SOund notifications
+"com.sec.android.app.samsungapps" # Samsung galaxy store
+"com.google.android.youtube" # youtube
+"com.google.android.gm" # gmail
+"com.android.chrome" # Chrome
+# My Vodafone
+# Amazon Shopping
+
+)
+$bloatware | % {
+# .\adb shell pm disable-user --user 0 $_ # optional - disable apps
+.\adb.exe uninstall --user 0 $_ # uninstall apps
+}
+```
+
 
 List packages
 
