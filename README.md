@@ -7,7 +7,7 @@
 | 🌎 Web Browser | [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | Sync using firefox account, note that extension data does not get backed up! |
 | Audio Book Player | [Voice](https://github.com/PaulWoitaschek/Voice/releases/download/25.9.19-5309019/app-github-release.apk) | No backup options exist | 
 | 📞 Phone | [Fossify Phone](https://github.com/FossifyOrg/Phone/releases/download/1.7.1/phone-14-foss-release.apk) | 
-| SMS/Messages | [Fossify Messages](https://github.com/FossifyOrg/Messages/releases/download/1.3.0/messages-15-foss-release.apk)
+| SMS/Messages | [Fossify Messages](https://github.com/FossifyOrg/Messages/releases/download/1.3.0/messages-15-foss-release.apk) | [Do the backup from v1.7 as there's a bug in newer versions](https://github.com/FossifyOrg/Messages/issues/713) | |
 | Podcast App | [AntennaPod](https://f-droid.org/repo/de.danoeh.antennapod_3090095.apk) | ✅ | ✅ |
 | QR reader | [BinaryEye](https://f-droid.org/repo/de.markusfisch.android.binaryeye_150.apk) | N | 
 | 📷 Camera |  |
