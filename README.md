@@ -142,24 +142,7 @@ adb shell pm list packages -e
 ```
 adb shell pm disable-user --user 0 <package_to_disable>
 ```
-``` 
-.\adb shell pm disable-user --user 0 com.google.android.feedback
-.\adb shell pm disable-user --user 0 com.google.android.printservice.recommendation
-.\adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox # Google 
-.\adb shell pm disable-user --user 0 com.google.android.music # Google Play Music
-.\adb shell pm disable-user --user 0 com.google.android.apps.docs # Google Drive
-.\adb shell pm disable-user --user 0 com.google.android.videos
-.\adb shell pm disable-user --user 0 com.android.printspooler
-.\adb shell pm disable-user --user 0 com.google.android.marvin.talkback # Android Accessibility Suite
-.\adb shell pm disable-user --user 0 com.microsoft.skydrive # Microsoft Skydrive
-.\adb shell pm disable-user --user 0 com.microsoft.office.officehubrow # Microsoft Office
-.\adb shell pm disable-user --user 0 com.android.chrome # Chrome
-.\adb shell pm disable-user --user 0 com.google.android.youtube
-.\adb shell pm disable-user --user 0 com.google.android.tts # Google Text-to-speech Engine
-.\adb shell pm disable-user --user 0 com.google.android.apps.turbo # Device Health Services
-.\adb shell pm disable-user --user 0 com.google.android.gm #gmail
-.\adb shell pm disable-user --user 0 com.google.android.apps.tachyon #Google Duo
-```
+
 
 ## Copy files to Android in recovery mode
 ```
@@ -187,8 +170,7 @@ fastboot flash recovery twrp.img
 fastboot reboot
 ```
 
-
-ADB over WIFI 
+### ADB over WIFI (ROOT required)
 
 Install app (easier than DIY) - ROOT access required! 
 
@@ -196,12 +178,11 @@ https://play.google.com/store/apps/details?id=com.ttxapps.wifiadb&hl=en
 
  
 
-### Download ADB/Fastboot 
+### Download ADB/Fastboot tools
 
 https://dl.google.com/android/repository/platform-tools-latest-windows.zip 
 
  
-
 Connect to the IP:Port on PC 
 
 ```powershell
@@ -234,26 +215,18 @@ adb backup -all -f /backup/location/file.ab
 $test = .\adb.exe shell pm list packages | select-string "fing" 
 
 # Grab the package name 
-
 $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
 
 .\adb backup -f c:\temp\$test -apk $test 
-
 .\adb.exe backup -f c:\temp\$test -apk $test 
 
 $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
-
 ``` 
 
  ## Re-enable an app
 ```
 pm enable -–user 0 PackageName
 adb shell cmd package install-existing <package name>
-```
-
-```
-$apkpath = .\adb.exe shell pm path $test 
-$apkpath=($apkpath.ToString()).trimstart("package");$apkpath = $apkpath.TrimStart(":") 
 ```
  
 ### Install (Sideload) an .apk
