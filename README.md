@@ -103,8 +103,12 @@ $bloatware = @(
 "com.sec.android.app.setupwizard" #Setup Wizard
 "com.samsung.android.app.routines" # Modes and routines
 # gallery
-# contacts 
-"com.samsung.android.dialer" # Samsung PHone
+# contacts | you'll need a replacement!
+"com.samsung.android.dialer" # Samsung Phone | You'll need a replacement!
+# Samsung audio broadcast/auracast | for sharing audio
+# interpreter /Galaxy AI
+com.samsung.android.forest # digital wellbeing
+com.google.androidglasses.core # Glasses Core
 )
 $bloatware | % {
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
