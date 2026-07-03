@@ -21,7 +21,7 @@
 | Network Scanner | Fing (old version/apk) |
 | 📺 YouTube client | [NewPipe](https://github.com/TeamNewPipe/NewPipe/releases/download/v0.28.0/NewPipe_v0.28.0.apk) | ✅ | ✅ | 
 | Calculator | |
-| Screen on toggle | Coffee |
+| Screen on toggle | [Coffee](https://f-droid.org/packages/com.github.muellerma.coffee/) | |
 | 📖 Contacts | Fossify Contacts | ✅ | ✅ |
 | App Store | F-Droid/Aurora store |
 | 🎶 Music Player | [Phonograph Plus](https://github.com/chr56/Phonograph_Plus/releases/download/v1.11.0/PhonographPlus_1.11.0_ModernStableRelease.apk) |
