@@ -16,21 +16,21 @@
 | 🖼 Gallery app | [Fossify Gallery](https://github.com/FossifyOrg/Gallery/releases/download/1.5.2/gallery-17-foss-release.apk) | | ✅ |
 | File Explorer | Solid Explorer | 
 | Barcode/Wallet app | [Catima](https://github.com/CatimaLoyalty/Android/releases/download/v2.38.0/app-foss-release.apk) | ✅ |
-| Weather | Weatherzone |
-| To do/tasks | Microsoft ToDo |
-| Network Scanner | Fing (old version/apk) |
+| Weather | ?? |
+| To do/tasks | ?? |
+| Network Scanner | Fing (old version/apk) | Note - I think newer Android versions have crippled useful network tools |
 | 📺 YouTube client | [NewPipe](https://github.com/TeamNewPipe/NewPipe/releases/download/v0.28.0/NewPipe_v0.28.0.apk) | ✅ | ✅ | 
 | Calculator | |
 | Screen on toggle | [Coffee](https://f-droid.org/packages/com.github.muellerma.coffee/) | |
 | 📖 Contacts | Fossify Contacts | ✅ | ✅ |
 | App Store | F-Droid/Aurora store |
 | 🎶 Music Player | [Phonograph Plus](https://github.com/chr56/Phonograph_Plus/releases/download/v1.11.0/PhonographPlus_1.11.0_ModernStableRelease.apk) |
-| PDF reader | FastPDFReader |
+| PDF reader | [FastPDFReader](https://play.google.com/store/apps/details?id=yeolee.co.kr.fastpdfreader) |
 | Compass | 
 | Unit Converter | |
 | 🗓 Calendar | [Fossify Calendar](https://github.com/FossifyOrg/Calendar/releases/download/1.6.1/calendar-11-foss-release.apk) |
 | Cast photos/videos/audio to DLNA (TV) | XCast |
-| | TUFFS |
+| |  |
 
 
 ### Get Started
