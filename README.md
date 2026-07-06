@@ -48,28 +48,34 @@ $bloatware = @(
 "au.com.vodafone.mobile.gss" # My Vodafone - forced install
 "com.amazon.appmanager" # Amazon Mobile Device Information Provider
 "com.amazon.mShop.android.shopping" # Amazon Shopping
-"com.android.chrome" # Google Chrome | warning, BYO browser
+"com.android.chrome" # Google Chrome | you'll need your own browser
 "com.android.hotwordenrollment.okgoogle" # Hey Google hotword
 "com.asurion.android.verizon.vms" # Verizon
-"com.audible.application" # Audible
+"com.audible.application"
 "com.blurb.checkout"
 "com.cequint.ecid"
+"com.diotek.sec.lookup.dictionary" # Samsung Dictionary
 "com.enhance.gameservice" # SAMSUNG GAME LAUNCHER 
 "com.facebook.appmanager" # Facebook
+"com.facebook.appmanager" # Facebook
+"com.facebook.katana" # Facebook
 "com.facebook.katana" # Facebook
 "com.facebook.services" # Facebook
+"com.facebook.system" # Facebook
 "com.facebook.system" # Facebook
 "com.google.android.adservices.api" # Ad privacy
 "com.google.android.apps.bard" # Google Gemini
 "com.google.android.apps.docs" # Google Drive
 "com.google.android.apps.messaging" # Google Messaging
 "com.google.android.apps.tachyon" #Google Duo
-"com.google.android.apps.turbo" # Device Health Services/ Google data collection
-"com.google.android.feedback"
+"com.google.android.apps.turbo" # Device Health Services
+"com.google.android.as" #  Android System Intelligence / Google Device Personalization related
+"com.google.android.feedback" # Android feedback
 "com.google.android.gm" # gmail app
 "com.google.android.googlequicksearchbox" # Google search - FYI this comes back when using Android Auto
 "com.google.android.health.connect.backuprestore"  # Google health
 "com.google.android.healthconnect.controller" # Google health
+"com.google.android.healthconnect.controller" # Health Connect
 "com.google.android.music" # Google Play Music
 "com.google.android.overlay.modules.healthfitness.forframework"  # Google health
 "com.google.android.printservice.recommendation"
@@ -82,9 +88,9 @@ $bloatware = @(
 "com.google.mainline.adservices" 
 "com.google.mainline.telemetry"
 "com.google.vr.vrcore" # Virtual reality
-"com.gotv.nflgamecenter.us.lite" # NFL Game center
+"com.gotv.nflgamecenter.us.lite"
 "com.hancom.office.editor.hidden"
-"com.imdb.mobile" # IMDB app
+"com.imdb.mobile" # IMDB
 "com.infraware.polarisoffice5"
 "com.instagram.android" # Instagram
 "com.microsoft.office.excel" # Microsoft Excel
@@ -92,14 +98,15 @@ $bloatware = @(
 "com.microsoft.office.powerpoint" # Microsoft 
 "com.microsoft.office.word" # Microsoft 
 "com.microsoft.skydrive" # Microsoft OneDrive/Skydrive
-"com.microsoft.skydrive" # Microsoft skydrive/onedrive
 "com.mobitv.client.tmobiletvhd" # T-Mobile
 "com.motricity.verizon.ssodownloadable" # Verizon
 "com.netflix.partner.activation" # Netflix
 "com.nuance.swype.input" # Swype keyboard
 "com.osp.app.signin" # Samsung Account
 "com.samsung.android.app.camera.sticker.facearavatar.preload"  # Avatar Stickers/Crocro and friends
+"com.samsung.android.app.clipboardedge" # Samsung Clipboard
 "com.samsung.android.app.contacts" # Samsung contacts - you'll need a replacement!
+"com.samsung.android.app.dressroom" # Wallpaper and Styles
 "com.samsung.android.app.interpreter" # Samsung translation/interpreter
 "com.samsung.android.app.omcagent" # Samsung Recommended apps
 "com.samsung.android.app.parentalcare" # Parental controls
@@ -107,6 +114,7 @@ $bloatware = @(
 "com.samsung.android.app.routines" # Samsung Modes and routines
 "com.samsung.android.app.sbrowseredge" # SAMSUNG browser
 "com.samsung.android.app.storyalbumwidget"
+"com.samsung.android.app.taskedge" # Samsung Tasks Edge
 "com.samsung.android.app.tips" # Samsung Tips
 "com.samsung.android.app.vrsetupwizardstub" # Virtual reality
 "com.samsung.android.app.watchmanagerstub" # Wearable Manager Installer
@@ -115,29 +123,46 @@ $bloatware = @(
 "com.samsung.android.bixby.wakeup" # Samsung Bixby
 "com.samsung.android.bixbyvision.framework" # Bixby
 "com.samsung.android.calendar" # Samsung Calendar
+"com.samsung.android.coldwalletservice" # Samsung Pay
+"com.samsung.android.da.daagent" # Samsung Dual Messenger
 "com.samsung.android.dbsc" # Galaxy setup
 "com.samsung.android.dialer" # Samsung Phone | Warning - You'll need a replacement!
 "com.samsung.android.email.provider" # SAMSUNG email
-"com.samsung.android.forest" # Samsung digital wellbeing/Weekly report
+"com.samsung.android.forest" # digital wellbeing
 "com.samsung.android.game.gamehome" # SAMSUNG GAME LAUNCHER
+"com.samsung.android.game.gamehome" # Samsung Game Services
+"com.samsung.android.game.gamehome" # Samsung Gaming hub
 "com.samsung.android.game.gametools" # SAMSUNG GAME LAUNCHER
+"com.samsung.android.game.gametools" # Samsung Game Services
+"com.samsung.android.game.gos" # Samsung Game Services
 "com.samsung.android.hmt.vrshell" # Virtual reality
 "com.samsung.android.hmt.vrsvc" # Virtual reality
 "com.samsung.android.intellivoiceservice" # Samsung Intelligence Voice Service is the system for connecting to the LLM server and Galaxy Advanced Intelligence services in Samsung Native Applications
 "com.samsung.android.kidsinstaller" # Samsung kids profile
 "com.samsung.android.knox.analytics.uploader"
-"com.samsung.android.mapsagent" # Application recommendations
+"com.samsung.android.mapsagent" # Samsung Application recommendations
+"com.samsung.android.mdx" # Samsung Link to Windows
 "com.samsung.android.messaging" # Samsung Messages
+"com.samsung.android.mobileservice" # Warning - Breaks Samsung Pay and Samsung Find my mobile
+"com.samsung.android.rubin.app" # Samsung Customization service (data collection)
 "com.samsung.android.samsungpassautofill" # Autofill with samsung pass
 "com.samsung.android.scloud" # Samsung CLoud
+"com.samsung.android.service.peoplestripe" # Samsung Contacts/messages
 "com.samsung.android.smartsuggestions" # Samsung smart suggestions | recommends apps/actions based on usage | https://www.xda-developers.com/how-to-use-smart-suggestions-on-samsung-device/
+"com.samsung.android.spay" # Samsung Pay
+"com.samsung.android.spayfw"  # Samsung Pay
 "com.samsung.android.themecenter" # Galaxy themes Service
 "com.samsung.android.themestore" # Galaxy themes
-"com.samsung.android.visionintelligence"
 "com.samsung.android.visionintelligence" # Bixby Vision
 "com.samsung.android.vtcamerasettings" # Samsung video call effects
+"com.samsung.android.wellbeing" # Samsung Digital Wellbeing
 "com.samsung.android.widgetapp.yahooedge.finance"
 "com.samsung.android.widgetapp.yahooedge.sport"
+"com.samsung.clipboardsaveservice" # Samsung Clipboard
+"com.samsung.clipboarduiservice" # Samsung Clipboard
+"com.samsung.crane" # Samsung phone/dialer - BYO phone/dialer
+"com.samsung.gamedriver.sm8750" # Samsung Game Services
+"com.samsung.gpuwatchapp" # Samsung Game Services
 "com.samsung.petservice" # Samsung pet care
 "com.samsung.SMT" # Samsung text-to-speech engine
 "com.samsung.SMT.lang_es_es_f00"
@@ -163,14 +188,17 @@ $bloatware = @(
 "com.sec.android.easyMover" # Samsung Smart Switch
 "com.sec.android.easyMover.Agent" # Samsung Smart Switch - device migration tool
 "com.sec.android.mimage.avatarstickers"
-"com.sec.phone" # Samsung phone - warning!
+"com.sec.android.widgetapp.easymodecontactswidget" # favourite contacts
+"com.sec.mhs.smarttethering" # auto hotspot - allows enabling hotspot from other devices
+"com.sec.phone" # Samsung phone - warning! BYO phone/dialer
+"com.sec.spp.push" # Samsung push service. shows those annoying ads in your notifications.
 "com.sec.svoice.lang.de_DE" # German
 "com.sec.svoice.lang.es_ES" # Spanish
 "com.sec.svoice.lang.fr_FR" # French
 "com.sec.svoice.lang.it_IT" # italian
 "com.skype.raider" # Microsoft 
 "com.swiftkey.swiftkeyconfigurator"
-"com.touchtype.swiftkey"
+"com.touchtype.swiftkey" # Swiftkey keyboard - BYO keyboard!
 "com.tripadvisor.tripadvisor"
 "com.vcast.mediamanager" # Verizon
 "com.vzw.hs.android.modlite" # Verizon
@@ -178,21 +206,24 @@ $bloatware = @(
 "com.wsomacp" # SAMSUNG email
 "flipboard.app"
 "flipboard.boxer.app"
+"samsung.android.mateagent" # Samsung galaxy friends
 "us.com.dt.iq.appsource.tmobile" # T-Mobile
+# "com.samsung.android.app.galaxyfinder" # Search bar for app drawer
+# "com.samsung.android.app.telephonyui" # Mobile network/APN settings
+# "com.samsung.android.setting.multisound"
+# "com.sec.android.easyonehand" # Samsung easy one hand mode - scales screen to make it easier to use
+# "sec.android.easyonehand" # Samsung easy one hand mode - scales screen to make it easier to use
+# com.google.android.tts # Text-to-speech. Breaks Android Auto
+# com.samsung.android.app.aodservice # Breaks the Samsung lock screen clock
 # gallery
 # interpreter /Galaxy AI
 # Samsung audio broadcast/auracast | for sharing audio
+# Samsung digital wellbeing / Weekly report
 #"com.google.android.partnersetup" # best to leave as is
 #"com.qti.qcc" # Qualcomm - could be important
-#"com.sec.svoice.lang.en_GB" 
+#"com.sec.svoice.lang.en_GB"
 #"com.sec.svoice.lang.en_US"
-# "com.android.settings.intelligence" # Do not disable - impacts Settings search
-# "com.samsung.android.app.find" # Do not disable - impacts Settings search
-# "com.sec.android.app.magnifier" # Do not disable - impacts Settings search
-# "com.samsung.android.settingshelper" # Do not disable - impacts Settings search
-"com.samsung.android.aremoji" # Samsung AR Emoji
-"com.samsung.android.aremojieditor" # Samsung AR Emoji editor
-"com.sec.android.app.kidshome" 
+#'com.samsung.android.allshare.service.fileshare" # Wi-Fi Direct sharing
 )
 $bloatware | % {
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
