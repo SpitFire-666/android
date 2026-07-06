@@ -64,7 +64,7 @@ $bloatware = @(
 "com.google.android.apps.docs" # Google Drive
 "com.google.android.apps.messaging" # Google Messaging
 "com.google.android.apps.tachyon" #Google Duo
-"com.google.android.apps.turbo" # Device Health Services
+"com.google.android.apps.turbo" # Device Health Services/ Google data collection
 "com.google.android.feedback"
 "com.google.android.gm" # gmail app
 "com.google.android.googlequicksearchbox" # Google search - FYI this comes back when using Android Auto
@@ -118,7 +118,7 @@ $bloatware = @(
 "com.samsung.android.dbsc" # Galaxy setup
 "com.samsung.android.dialer" # Samsung Phone | Warning - You'll need a replacement!
 "com.samsung.android.email.provider" # SAMSUNG email
-"com.samsung.android.forest" # digital wellbeing
+"com.samsung.android.forest" # Samsung digital wellbeing/Weekly report
 "com.samsung.android.game.gamehome" # SAMSUNG GAME LAUNCHER
 "com.samsung.android.game.gametools" # SAMSUNG GAME LAUNCHER
 "com.samsung.android.hmt.vrshell" # Virtual reality
@@ -182,11 +182,17 @@ $bloatware = @(
 # gallery
 # interpreter /Galaxy AI
 # Samsung audio broadcast/auracast | for sharing audio
-# Samsung digital wellbeing / Weekly report
 #"com.google.android.partnersetup" # best to leave as is
 #"com.qti.qcc" # Qualcomm - could be important
 #"com.sec.svoice.lang.en_GB" 
 #"com.sec.svoice.lang.en_US"
+# "com.android.settings.intelligence" # Do not disable - impacts Settings search
+# "com.samsung.android.app.find" # Do not disable - impacts Settings search
+# "com.sec.android.app.magnifier" # Do not disable - impacts Settings search
+# "com.samsung.android.settingshelper" # Do not disable - impacts Settings search
+"com.samsung.android.aremoji" # Samsung AR Emoji
+"com.samsung.android.aremojieditor" # Samsung AR Emoji editor
+"com.sec.android.app.kidshome" 
 )
 $bloatware | % {
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
