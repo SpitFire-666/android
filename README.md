@@ -1,4 +1,4 @@
-# 📱 Android
+# 📱 Android - apps, de-bloating and ADB stuff
 
 ## Recommended Apps
 
@@ -33,7 +33,7 @@
 | |  |
 
 
-# De-Bloat (Uninstall/Disable apps - no root required!)
+# De-Bloating (Uninstall/Disable apps - no root required!)
 
 1. Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
 2. List packages
