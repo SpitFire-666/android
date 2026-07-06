@@ -33,23 +33,16 @@
 | |  |
 
 
-- Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
+# De-Bloat (Uninstall/Disable apps - no root required!)
 
-```
-adb devices
-```
-
-![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
-
-## De-Bloat (Uninstall/Disable apps - no root required!)
-
-### List packages
+1. Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
+2. List packages
 ```powershell
 (.\adb.exe shell pm list packages -e) -replace("package:")
 ```
-
 - Use [Application Inspector](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01) to identify package names
 
+3. De-bloat!
 ```powershell
 $bloatware = @(
 "au.com.vodafone.mobile.gss" # My Vodafone - forced install
