@@ -200,10 +200,10 @@ $bloatware | % {
 }
 ```
 
-### Re-enable an app
+### Re-enable or Re-install an app
 ```
-pm enable -–user 0 PackageName
-adb shell cmd package install-existing <package name>
+pm enable -–user 0 com.mistake.whoops
+adb shell cmd package install-existing com.mistake.whoops
 ```
 
 Interactive uninstaller/en-masse
