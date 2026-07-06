@@ -33,7 +33,6 @@
 | |  |
 
 
-### Get Started
 - Ensure ```USB debugging``` and ```Unknown Sources``` are enabled on the android phone 
 
 ```
@@ -42,84 +41,170 @@ adb devices
 
 ![image](https://user-images.githubusercontent.com/38451588/221343145-190e7560-c416-4226-9694-8fb86de8f42a.png)
 
-## Uninstall apps - no root required!
+## De-Bloat (Uninstall/Disable apps - no root required!)
+
+### List packages
+```powershell
+(.\adb.exe shell pm list packages -e) -replace("package:")
+```
+
+- Use [Application Inspector](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01) to identify package names
 
 ```powershell
 $bloatware = @(
-"com.google.android.feedback"
-"com.google.android.printservice.recommendation"
-"com.google.android.googlequicksearchbox" # Google 
-"com.google.android.music" # Google Play Music
-"com.google.android.apps.docs" # Google Drive
-"com.google.android.videos"
-"com.microsoft.skydrive" # Microsoft OneDrive/Skydrive
-"com.microsoft.office.officehubrow" # Microsoft Office
-"com.google.android.apps.turbo" # Device Health Services
-"com.google.android.gm" #gmail
-"com.google.android.apps.tachyon" #Google Duo
-"com.samsung.android.bixby.wakeup" # Bixby
-"com.samsung.android.bixby.agent" # Bixby
-"com.samsung.android.visionintelligence" # Bixby Vision
-"com.facebook.katana" # facebook
-"com.samsung.android.app.tips" # Samsung Tips
-"com.samsung.android.game.gamehome" # Gaming hub
-"com.samsung.android.app.camera.sticker.facearavatar.preload"  # Avatar Stickers
-"com.sec.android.mimage.avatarstickers"
-"com.google.android.adservices.api" # Ad privacy
-"com.google.android.healthconnect.controller" # Health Connect
-"com.instagram.android" # Instagram
-"com.google.android.apps.bard" # Google Gemini
-"com.android.hotwordenrollment.okgoogle" # Hey Google hotword
-"com.sec.android.app.vepreload" # Studio/Samsung video editor
-"com.samsung.android.samsungpassautofill" # Autofill with samsung pass
-"com.google.audio.hearing.visualization.accessibility.scribe" # Live Transcribe and SOund notifications
-"com.sec.android.app.samsungapps" # Samsung galaxy store
-"com.google.android.youtube" # youtube
-"com.google.android.gm" # gmail
-"com.android.chrome" # Chrome
 "au.com.vodafone.mobile.gss" # My Vodafone - forced install
-"com.amazon.mShop.android.shopping" # Amazon Shopping
 "com.amazon.appmanager" # Amazon Mobile Device Information Provider
-"com.samsung.android.vtcamerasettings" # Samsung video call effects
-"com.samsung.SMT" # Samsung text-to-speech engine
-"com.samsung.android.ardrawing" # Samsung AR Drawing
-"com.netflix.partner.activation" # Netflix
-"com.sec.android.easyMover.Agent" # Samsung Smart Switch - device migration tool
-"com.sec.android.easyMover" # Samsung Smart Switch
-"com.samsung.android.calendar" # Samsung Calendar
-"com.samsung.android.app.reminder" # Samsung Reminder
-"com.osp.app.signin" # Samsung Account
-"com.samsung.android.scloud" # Samsung CLoud
-"com.samsung.android.mapsagent" # Application recommendations
-"com.samsung.android.app.omcagent" # Recommended apps
-"com.samsung.android.app.camera.sticker.facearavatar.preload" # Crocro and friends
-"com.samsung.android.themestore" # Galaxy themes
-"com.samsung.android.themecenter" # Galaxy themes Service
-"com.samsung.android.messaging" # Samsung Messages
+"com.amazon.mShop.android.shopping" # Amazon Shopping
+"com.android.chrome" # Google Chrome | warning, BYO browser
+"com.android.hotwordenrollment.okgoogle" # Hey Google hotword
+"com.asurion.android.verizon.vms" # Verizon
+"com.audible.application" # Audible
+"com.blurb.checkout"
+"com.cequint.ecid"
+"com.enhance.gameservice" # SAMSUNG GAME LAUNCHER 
+"com.facebook.appmanager" # Facebook
+"com.facebook.katana" # Facebook
+"com.facebook.services" # Facebook
+"com.facebook.system" # Facebook
+"com.google.android.adservices.api" # Ad privacy
+"com.google.android.apps.bard" # Google Gemini
+"com.google.android.apps.docs" # Google Drive
 "com.google.android.apps.messaging" # Google Messaging
+"com.google.android.apps.tachyon" #Google Duo
+"com.google.android.apps.turbo" # Device Health Services
+"com.google.android.feedback"
+"com.google.android.gm" # gmail app
+"com.google.android.googlequicksearchbox" # Google search - FYI this comes back when using Android Auto
+"com.google.android.health.connect.backuprestore"  # Google health
+"com.google.android.healthconnect.controller" # Google health
+"com.google.android.music" # Google Play Music
+"com.google.android.overlay.modules.healthfitness.forframework"  # Google health
+"com.google.android.printservice.recommendation"
+"com.google.android.safetycore" # scans your device for naughty content https://allaboutcookies.org/what-is-android-system-safetycore
+"com.google.android.videos"
+"com.google.android.youtube" # youtube
+"com.google.androidglasses.core" # Glasses Core
+"com.google.ar.core" # Google Play services for AR (augmented reality)
+"com.google.audio.hearing.visualization.accessibility.scribe" # Live Transcribe and SOund notifications
+"com.google.mainline.adservices" 
+"com.google.mainline.telemetry"
+"com.google.vr.vrcore" # Virtual reality
+"com.gotv.nflgamecenter.us.lite" # NFL Game center
+"com.hancom.office.editor.hidden"
+"com.imdb.mobile" # IMDB app
+"com.infraware.polarisoffice5"
+"com.instagram.android" # Instagram
+"com.microsoft.office.excel" # Microsoft Excel
+"com.microsoft.office.officehubrow" # Microsoft Office
+"com.microsoft.office.powerpoint" # Microsoft 
+"com.microsoft.office.word" # Microsoft 
+"com.microsoft.skydrive" # Microsoft OneDrive/Skydrive
+"com.microsoft.skydrive" # Microsoft skydrive/onedrive
+"com.mobitv.client.tmobiletvhd" # T-Mobile
+"com.motricity.verizon.ssodownloadable" # Verizon
+"com.netflix.partner.activation" # Netflix
+"com.nuance.swype.input" # Swype keyboard
+"com.osp.app.signin" # Samsung Account
+"com.samsung.android.app.camera.sticker.facearavatar.preload"  # Avatar Stickers/Crocro and friends
+"com.samsung.android.app.contacts" # Samsung contacts - you'll need a replacement!
+"com.samsung.android.app.interpreter" # Samsung translation/interpreter
+"com.samsung.android.app.omcagent" # Samsung Recommended apps
+"com.samsung.android.app.parentalcare" # Parental controls
+"com.samsung.android.app.reminder" # Samsung Reminder
+"com.samsung.android.app.routines" # Samsung Modes and routines
+"com.samsung.android.app.sbrowseredge" # SAMSUNG browser
+"com.samsung.android.app.storyalbumwidget"
+"com.samsung.android.app.tips" # Samsung Tips
+"com.samsung.android.app.vrsetupwizardstub" # Virtual reality
+"com.samsung.android.app.watchmanagerstub" # Wearable Manager Installer
+"com.samsung.android.ardrawing" # Samsung AR Drawing
+"com.samsung.android.bixby.agent" # Samsung Bixby
+"com.samsung.android.bixby.wakeup" # Samsung Bixby
+"com.samsung.android.bixbyvision.framework" # Bixby
+"com.samsung.android.calendar" # Samsung Calendar
 "com.samsung.android.dbsc" # Galaxy setup
+"com.samsung.android.dialer" # Samsung Phone | Warning - You'll need a replacement!
+"com.samsung.android.email.provider" # SAMSUNG email
+"com.samsung.android.forest" # digital wellbeing
+"com.samsung.android.game.gamehome" # SAMSUNG GAME LAUNCHER
+"com.samsung.android.game.gametools" # SAMSUNG GAME LAUNCHER
+"com.samsung.android.hmt.vrshell" # Virtual reality
+"com.samsung.android.hmt.vrsvc" # Virtual reality
+"com.samsung.android.intellivoiceservice" # Samsung Intelligence Voice Service is the system for connecting to the LLM server and Galaxy Advanced Intelligence services in Samsung Native Applications
+"com.samsung.android.kidsinstaller" # Samsung kids profile
+"com.samsung.android.knox.analytics.uploader"
+"com.samsung.android.mapsagent" # Application recommendations
+"com.samsung.android.messaging" # Samsung Messages
+"com.samsung.android.samsungpassautofill" # Autofill with samsung pass
+"com.samsung.android.scloud" # Samsung CLoud
+"com.samsung.android.smartsuggestions" # Samsung smart suggestions | recommends apps/actions based on usage | https://www.xda-developers.com/how-to-use-smart-suggestions-on-samsung-device/
+"com.samsung.android.themecenter" # Galaxy themes Service
+"com.samsung.android.themestore" # Galaxy themes
+"com.samsung.android.visionintelligence"
+"com.samsung.android.visionintelligence" # Bixby Vision
+"com.samsung.android.vtcamerasettings" # Samsung video call effects
+"com.samsung.android.widgetapp.yahooedge.finance"
+"com.samsung.android.widgetapp.yahooedge.sport"
+"com.samsung.petservice" # Samsung pet care
+"com.samsung.SMT" # Samsung text-to-speech engine
+"com.samsung.SMT.lang_es_es_f00"
+"com.samsung.SMT.lang_es_mx_f00"
+"com.samsung.SMT.lang_es_us_f00"
+"com.samsung.SMT.lang_fr_fr_f00"
+"com.samsung.SMT.lang_hi_in_f00"
+"com.samsung.SMT.lang_id_id_f00"
+"com.samsung.SMT.lang_it_it_f00"
+"com.samsung.SMT.lang_pl_pl_f00"
+"com.samsung.SMT.lang_pt_br_f00"
+"com.samsung.SMT.lang_ru_ru_f00"
+"com.samsung.SMT.lang_th_th_f00"
+"com.samsung.SMT.lang_vi_vn_f00"
+"com.samsung.vmmhux" # Verizon
+"com.samsung.vvm" # Verizon
+"com.sec.android.app.chromecustomizations"
+"com.sec.android.app.samsungapps" # Samsung galaxy store
+"com.sec.android.app.sbrowser" # SAMSUNG browser
 "com.sec.android.app.SecSetupWizard" #Samsung Setup Wizard
-"com.sec.phone" # Samsung phone - warning!
 "com.sec.android.app.setupwizard" #Setup Wizard
-"com.samsung.android.app.routines" # Modes and routines
+"com.sec.android.app.vepreload" # Studio/Samsung video editor
+"com.sec.android.easyMover" # Samsung Smart Switch
+"com.sec.android.easyMover.Agent" # Samsung Smart Switch - device migration tool
+"com.sec.android.mimage.avatarstickers"
+"com.sec.phone" # Samsung phone - warning!
+"com.sec.svoice.lang.de_DE" # German
+"com.sec.svoice.lang.es_ES" # Spanish
+"com.sec.svoice.lang.fr_FR" # French
+"com.sec.svoice.lang.it_IT" # italian
+"com.skype.raider" # Microsoft 
+"com.swiftkey.swiftkeyconfigurator"
+"com.touchtype.swiftkey"
+"com.tripadvisor.tripadvisor"
+"com.vcast.mediamanager" # Verizon
+"com.vzw.hs.android.modlite" # Verizon
+"com.vzw.hss.myverizon" # Verizon
+"com.wsomacp" # SAMSUNG email
+"flipboard.app"
+"flipboard.boxer.app"
+"us.com.dt.iq.appsource.tmobile" # T-Mobile
 # gallery
-# contacts | you'll need a replacement!
-"com.samsung.android.dialer" # Samsung Phone | You'll need a replacement!
-# Samsung audio broadcast/auracast | for sharing audio
 # interpreter /Galaxy AI
-com.samsung.android.forest # digital wellbeing
-com.google.androidglasses.core # Glasses Core
+# Samsung audio broadcast/auracast | for sharing audio
+# Samsung digital wellbeing / Weekly report
+#"com.google.android.partnersetup" # best to leave as is
+#"com.qti.qcc" # Qualcomm - could be important
+#"com.sec.svoice.lang.en_GB" 
+#"com.sec.svoice.lang.en_US"
 )
 $bloatware | % {
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
-.\adb.exe uninstall --user 0 $_
+.\adb.exe uninstall --user 0 $_ # Uninstall
 }
 ```
 
-List packages
-
-```powershell
-adb.exe shell pm list packages -e
+### Re-enable an app
+```
+pm enable -–user 0 PackageName
+adb shell cmd package install-existing <package name>
 ```
 
 Interactive uninstaller/en-masse
@@ -134,21 +219,7 @@ $packages = (.\adb.exe shell pm list packages -e) -replace("package:","") | ogv 
 C:\Android\ADB+Fastboot\adb push "C:\Android\file.zip" /sdcard/Download/
 ```
 
-### Disable installed apps (no root required) 
-
-- Use [Application Inspector](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01) to help identify package names
-
-- List enabled apps
-```
-adb shell pm list packages -e
-```
-- Disable the app: 
-```
-adb shell pm disable-user --user 0 <package_to_disable>
-```
-
-
-## Copy files to Android in recovery mode
+### Copy files to Android in recovery mode
 ```
 adb push "C:\NEXUS\Lineage\lineage-14.1-20171106-nightly-bullhead-signed.zip" /sdcard/ 
 ```
@@ -156,7 +227,7 @@ adb push "C:\NEXUS\Lineage\lineage-14.1-20171106-nightly-bullhead-signed.zip" /s
 ![image](https://user-images.githubusercontent.com/38451588/221347116-cceaec8a-6a42-47b6-877d-ab7285b705f7.png)
 
 
-# Lock / Unlock bootloader
+#### Lock / Unlock bootloader
 - Can be done with or without computer
 
 ## Computer via USB
@@ -180,7 +251,6 @@ Install app (easier than DIY) - ROOT access required!
 
 https://play.google.com/store/apps/details?id=com.ttxapps.wifiadb&hl=en 
 
- 
 
 ### Download ADB/Fastboot tools
 
@@ -227,11 +297,6 @@ $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":")
 $test=($test.ToString()).trimstart("package");$test = $test.TrimStart(":") 
 ``` 
 
- ## Re-enable an app
-```
-pm enable -–user 0 PackageName
-adb shell cmd package install-existing <package name>
-```
  
 ### Install (Sideload) an .apk
 
