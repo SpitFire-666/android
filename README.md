@@ -49,19 +49,18 @@ $bloatware = @(
 "com.amazon.appmanager" # Amazon Mobile Device Information Provider
 "com.amazon.mShop.android.shopping" # Amazon Shopping
 "com.android.chrome" # Google Chrome | you'll need your own browser
+"com.android.contacts" # Contacts
+"com.android.gallery3d" # Stock Android photo gallery app
 "com.android.hotwordenrollment.okgoogle" # Hey Google hotword
 "com.asurion.android.verizon.vms" # Verizon
-"com.audible.application"
+"com.audible.application" # Audible app
 "com.blurb.checkout"
 "com.cequint.ecid"
 "com.diotek.sec.lookup.dictionary" # Samsung Dictionary
 "com.enhance.gameservice" # SAMSUNG GAME LAUNCHER 
 "com.facebook.appmanager" # Facebook
-"com.facebook.appmanager" # Facebook
-"com.facebook.katana" # Facebook
 "com.facebook.katana" # Facebook
 "com.facebook.services" # Facebook
-"com.facebook.system" # Facebook
 "com.facebook.system" # Facebook
 "com.google.android.adservices.api" # Ad privacy
 "com.google.android.apps.bard" # Google Gemini
@@ -90,6 +89,9 @@ $bloatware = @(
 "com.google.vr.vrcore" # Virtual reality
 "com.gotv.nflgamecenter.us.lite"
 "com.hancom.office.editor.hidden"
+"com.huawei.appmarket" # Huawei App Gallery
+"com.huawei.himovie.overseas" # Huawei Video
+"com.huawei.recsys" # Huawei HwIntelligentRecSystem is a smart app that provides personalized services on HiBoard
 "com.imdb.mobile" # IMDB
 "com.infraware.polarisoffice5"
 "com.instagram.android" # Instagram
@@ -129,10 +131,7 @@ $bloatware = @(
 "com.samsung.android.dialer" # Samsung Phone | Warning - You'll need a replacement!
 "com.samsung.android.email.provider" # SAMSUNG email
 "com.samsung.android.forest" # digital wellbeing
-"com.samsung.android.game.gamehome" # SAMSUNG GAME LAUNCHER
 "com.samsung.android.game.gamehome" # Samsung Game Services
-"com.samsung.android.game.gamehome" # Samsung Gaming hub
-"com.samsung.android.game.gametools" # SAMSUNG GAME LAUNCHER
 "com.samsung.android.game.gametools" # Samsung Game Services
 "com.samsung.android.game.gos" # Samsung Game Services
 "com.samsung.android.hmt.vrshell" # Virtual reality
@@ -198,7 +197,9 @@ $bloatware = @(
 "com.sec.svoice.lang.it_IT" # italian
 "com.skype.raider" # Microsoft 
 "com.swiftkey.swiftkeyconfigurator"
+"com.swiftkey.swiftkeyconfigurator" # Swiftkey
 "com.touchtype.swiftkey" # Swiftkey keyboard - BYO keyboard!
+"com.touchtype.swiftkey" # Swiftkey keyboard - warning - BYO keyboard
 "com.tripadvisor.tripadvisor"
 "com.vcast.mediamanager" # Verizon
 "com.vzw.hs.android.modlite" # Verizon
@@ -208,22 +209,25 @@ $bloatware = @(
 "flipboard.boxer.app"
 "samsung.android.mateagent" # Samsung galaxy friends
 "us.com.dt.iq.appsource.tmobile" # T-Mobile
+# "---- OPTIONALS / known impact - CAUTION----------"
+# "com.android.stk" # SIM Toolkit
+# "com.google.android.gms" # Google Play Services - warning, some apps depend on this
+# "com.google.android.packageinstaller" # Google Play Store - warning! May be required to install APK files!
+# "com.google.android.partnersetup" # best to leave as is
+# "com.huawei.systemmanager" # Huawei Optimiser - warning You lose phone functionality.
+# "com.huawei.wifieapsimplmn" # Breaks wifi
+# "com.qti.qcc" # Qualcomm - could be important
+# "com.samsung.android.allshare.service.fileshare" # Wi-Fi Direct sharing
 # "com.samsung.android.app.galaxyfinder" # Search bar for app drawer
 # "com.samsung.android.app.telephonyui" # Mobile network/APN settings
 # "com.samsung.android.setting.multisound"
 # "com.sec.android.easyonehand" # Samsung easy one hand mode - scales screen to make it easier to use
+# "com.sec.svoice.lang.en_GB"
+# "com.sec.svoice.lang.en_US"
 # "sec.android.easyonehand" # Samsung easy one hand mode - scales screen to make it easier to use
 # com.google.android.tts # Text-to-speech. Breaks Android Auto
 # com.samsung.android.app.aodservice # Breaks the Samsung lock screen clock
-# gallery
-# interpreter /Galaxy AI
 # Samsung audio broadcast/auracast | for sharing audio
-# Samsung digital wellbeing / Weekly report
-#"com.google.android.partnersetup" # best to leave as is
-#"com.qti.qcc" # Qualcomm - could be important
-#"com.sec.svoice.lang.en_GB"
-#"com.sec.svoice.lang.en_US"
-#'com.samsung.android.allshare.service.fileshare" # Wi-Fi Direct sharing
 )
 $bloatware | % {
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
