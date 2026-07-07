@@ -232,9 +232,13 @@ $bloatware | % {
 ```
 
 ### Re-enable or Re-install an app
-```
-pm enable -–user 0 com.mistake.whoops
-adb shell cmd package install-existing com.mistake.whoops
+
+```powershell
+# Re-enable an app
+.\adb shell pm enable "com.mistake.whoops" 
+
+# Re-install an app
+.\adb shell cmd package install-existing com.mistake.whoops
 ```
 
 Interactive uninstaller/en-masse
