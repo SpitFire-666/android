@@ -62,6 +62,9 @@ $bloatware = @(
 "com.facebook.katana" # Facebook
 "com.facebook.services" # Facebook
 "com.facebook.system" # Facebook
+"com.samsung.android.widget.pictureframe" # Samsung - gallery related
+"com.samsung.android.globalpostprocmgr" # Galaxy Editing Service
+"com.samsung.accessory.budsunitemgr" #Samsung galaxy buds/earbuds
 "com.google.android.adservices.api" # Ad privacy
 "com.google.android.apps.bard" # Google Gemini
 "com.google.android.apps.docs" # Google Drive
@@ -136,7 +139,7 @@ $bloatware = @(
 "com.samsung.android.game.gos" # Samsung Game Services
 "com.samsung.android.hmt.vrshell" # Virtual reality
 "com.samsung.android.hmt.vrsvc" # Virtual reality
-"com.samsung.android.intellivoiceservice" # Samsung Intelligence Voice Service is the system for connecting to the LLM server and Galaxy Advanced Intelligence services in Samsung Native Applications
+"com.samsung.android.intellivoiceservice" # Samsung Intelligence Voice connects to the LLM server and Galaxy Advanced Intelligence services in Samsung Native Applications
 "com.samsung.android.kidsinstaller" # Samsung kids profile
 "com.samsung.android.knox.analytics.uploader"
 "com.samsung.android.mapsagent" # Samsung Application recommendations
@@ -191,14 +194,13 @@ $bloatware = @(
 "com.sec.mhs.smarttethering" # auto hotspot - allows enabling hotspot from other devices
 "com.sec.phone" # Samsung phone - warning! BYO phone/dialer
 "com.sec.spp.push" # Samsung push service. shows those annoying ads in your notifications.
+"com.samsung.android.aremoji" # Galaxy Avatar
 "com.sec.svoice.lang.de_DE" # German
 "com.sec.svoice.lang.es_ES" # Spanish
 "com.sec.svoice.lang.fr_FR" # French
 "com.sec.svoice.lang.it_IT" # italian
-"com.skype.raider" # Microsoft 
-"com.swiftkey.swiftkeyconfigurator"
+"com.skype.raider" # Microsoft Skype
 "com.swiftkey.swiftkeyconfigurator" # Swiftkey
-"com.touchtype.swiftkey" # Swiftkey keyboard - BYO keyboard!
 "com.touchtype.swiftkey" # Swiftkey keyboard - warning - BYO keyboard
 "com.tripadvisor.tripadvisor"
 "com.vcast.mediamanager" # Verizon
@@ -211,6 +213,7 @@ $bloatware = @(
 "us.com.dt.iq.appsource.tmobile" # T-Mobile
 # "---- OPTIONALS / known impact - CAUTION----------"
 # "com.android.stk" # SIM Toolkit
+# "com.sec.android.gallery3d" # Samsung gallery. Camera app relies on this to review photos
 # "com.google.android.gms" # Google Play Services - warning, some apps depend on this
 # "com.google.android.packageinstaller" # Google Play Store - warning! May be required to install APK files!
 # "com.google.android.partnersetup" # best to leave as is
@@ -225,11 +228,12 @@ $bloatware = @(
 # "com.sec.svoice.lang.en_GB"
 # "com.sec.svoice.lang.en_US"
 # "sec.android.easyonehand" # Samsung easy one hand mode - scales screen to make it easier to use
-# com.google.android.tts # Text-to-speech. Breaks Android Auto
-# com.samsung.android.app.aodservice # Breaks the Samsung lock screen clock
+# "com.google.android.tts" # Text-to-speech. Breaks Android Auto
+# "com.samsung.android.app.aodservice" # Breaks the Samsung lock screen clock
 # Samsung audio broadcast/auracast | for sharing audio
 )
 $bloatware | % {
+Write-Progress -Activity "$_"
 # .\adb shell pm disable-user --user 0 $_ # Optional: disable instead of uninstall
 .\adb.exe uninstall --user 0 $_ # Uninstall
 }
